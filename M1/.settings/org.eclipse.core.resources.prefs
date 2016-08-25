@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/main/resources/home/config/jdbc.properties=GBK
+encoding//src/main/resources/home/config/log4j.properties=UTF-8
+encoding//src/main/resources/home/config/systemconfig_product_common.properties=GBK
+encoding//src/main/resources/home/config/systemconfig_product_manage.properties=GBK
+encoding//src/main/webapp/index.jsp=UTF-8
+encoding/<project>=UTF-8

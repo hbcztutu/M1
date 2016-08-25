@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" threshold="all">
+    <appender name="Console" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%5p] [%t] (%c) - %m%n"/>
+        </layout>
+    </appender>
+    <appender name="ManageLogFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="D:/home/UPS/UPSlogs/PMPFManageSystem.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%5p] [%t] (%c) - %m%n"/>
+        </layout>
+   </appender>
+    <appender name="QuickPay" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="D:/home/UPS/UPSlogs/QuickPay.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%5p] [%t] (%c) - %m%n"/>
+        </layout>
+   </appender>
+    <appender name="CoreTxLogFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="D:/home/UPS/UPSlogs/PMPFCoreTX.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%5p] [%t] (%c) - %m%n"/>
+        </layout>
+   </appender>
+    <appender name="B2CLogFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="D:/home/UPS/UPSlogs/PMPFB2C.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%5p] [%t] (%c) - %m%n"/>
+        </layout>
+   </appender>
+   
+    
+    <logger name="ups.system" additivity="false">
+        <level class="org.apache.log4j.Level" value="debug"/>
+          <appender-ref ref="Console"/>
+        <appender-ref ref="ManageLogFile"/>
+    </logger>
+   
+    <logger name="ups.system.coretx" additivity="false">
+        <level class="org.apache.log4j.Level" value="debug"/>
+        <appender-ref ref="CoreTxLogFile"/>
+    </logger>
+    
+    <logger name="ups.system.b2c" additivity="false">
+        <level class="org.apache.log4j.Level" value="debug"/>
+        <appender-ref ref="B2CLogFile"/>
+    </logger>
+
+    <logger name="org.hibernate" additivity="false">
+        <level class="org.apache.log4j.Level" value="info"/>
+           <appender-ref ref="Console"/>        
+        <appender-ref ref="ManageLogFile"/>
+    </logger>
+      <logger name="ups.common" additivity="false">
+        <level class="org.apache.log4j.Level" value="debug"/>
+         <appender-ref ref="Console"/>
+        <appender-ref ref="ManageLogFile"/>
+    </logger>
+     <logger name="org.hzcitizen.pay" additivity="false">
+        <level class="org.apache.log4j.Level" value="debug"/>
+         <appender-ref ref="Console"/>
+        <appender-ref ref="ManageLogFile"/>
+    </logger>
+    <root>
+        <priority value="INFO"/>
+        <appender-ref ref="Console"/>
+        <appender-ref ref="ManageLogFile"/>
+    </root>
+</log4j:configuration>
