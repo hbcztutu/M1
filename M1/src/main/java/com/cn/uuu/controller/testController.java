@@ -49,7 +49,7 @@ public class testController {
           
 		}else{
 			
-			model.addAttribute("user can not in use");
+			model.addAttribute("tip","user can not in use");
 			System.out.println("can not get user");
 		}
 	      	return "indexuser";

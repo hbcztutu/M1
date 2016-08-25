@@ -6,6 +6,7 @@
   </head>
   
   <body>
+   ${tip}
     ${user.username}
   </body>
 </html>
