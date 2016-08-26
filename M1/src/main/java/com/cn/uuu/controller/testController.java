@@ -4,17 +4,16 @@ package com.cn.uuu.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.cn.uuu.pojo.User;
 import com.cn.uuu.service.UserService;
+
+
 
 
 
@@ -39,8 +38,8 @@ public class testController {
 		User userLogin=new User();
 		userLogin.setUsername(request.getParameter("username"));
 		userLogin.setPassword(request.getParameter("password"));
-		
-		 User user=new User();
+		String str= (String) request.getParameter("num");
+		User user=new User();
 
 		if(this.userService.getLoginUser(userLogin)){
           user=this.userService.getUserByusername(userLogin.getUsername());
