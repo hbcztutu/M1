@@ -1,10 +1,6 @@
 
 package common.service;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.util.List;
-
 import org.apache.log4j.Logger;
 
 import com.mysql.fabric.xmlrpc.base.Params;
@@ -27,6 +23,7 @@ public class ParameterService {
 	 */
 	private static boolean isInitialized = false;
 
+	@SuppressWarnings("unused")
 	private static String iSystemRuntimeMode = "";
 
 	/**
@@ -65,6 +62,7 @@ public class ParameterService {
 	 * 
 	 * @throws Exception
 	 */
+	@SuppressWarnings("unused")
 	public static synchronized void refreshSystemParamerterLocator() throws Exception {
 		iProperty = new CommentedProperties();
 

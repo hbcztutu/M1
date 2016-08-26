@@ -1,7 +1,6 @@
 
 package common.service;
 
-import java.util.List;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
@@ -15,6 +14,7 @@ public class MessageService {
 	private static Logger sHiLogger = Logger.getLogger(MessageService.class);
 	private static MessageService uniqueInstanceOf_MessageService = null;
 	private static Properties iProperty = new Properties();
+	@SuppressWarnings("unused")
 	private static boolean isInitialized = false;
 
 	/**
@@ -23,7 +23,7 @@ public class MessageService {
 	 * @throws Exception
 	 */
 	private MessageService() throws Exception {
-		
+		sHiLogger.info("MessageService");
 		/*
 		try {
 			Message tMessage;
