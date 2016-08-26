@@ -38,6 +38,7 @@ public class HiLogger {
 		this.throwableLogger = Logger.getLogger(THROWABLE_LOGGER_PRE + "." + name);
 	}
 	
+	@SuppressWarnings("rawtypes")
 	private HiLogger(Class clazz) {
 		this(clazz.getName());
 	}
@@ -60,6 +61,7 @@ public class HiLogger {
 	 * 
 	 * @return 日志记录对象
 	 */
+	@SuppressWarnings("rawtypes")
 	public static HiLogger getHiLogger(Class clazz){
 		return new HiLogger(clazz);
 	}
@@ -117,6 +119,7 @@ public class HiLogger {
 		logNestedException(Level.FATAL, msg, t);
 	}
 	
+	@SuppressWarnings("rawtypes")
 	void logNestedException(Level level, Object msg, Throwable t) {
 		if (t == null){
 			return;
