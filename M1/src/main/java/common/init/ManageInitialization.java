@@ -4,6 +4,8 @@ package common.init;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import common.log.HiLogger;
 
 
