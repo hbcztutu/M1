@@ -5,7 +5,7 @@
 <body>
 <h2>Hello World!我们都是好孩子</h2>
 <form name="from1" action="user/showuser.do" method="post">
-<table width="300" border="1">
+<table width="300px" border="1">
 
 <tr>
     <td colspan="2"> 登录窗口</td>
